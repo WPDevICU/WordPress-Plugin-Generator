@@ -1,0 +1,21 @@
+{
+    "name": "wpdevicu/wppg",
+    "description": "A Robust WordPress Plugin Generator",
+    "type": "library",
+    "license": "GPL2",
+    "autoload": {
+        "psr-4": {
+            "WPDevICU\\WPPG\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Shazahanul Islam Shohag",
+            "email": "shohag121@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "symfony/console": "^6.0"
+    }
+}
