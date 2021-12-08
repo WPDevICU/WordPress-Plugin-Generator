@@ -21,9 +21,11 @@ class NewCommand extends Command
         try {
             $name = $input->getArgument('name');
             $output->writeln('Creating new plugin: ' . $name);
+
             return self::SUCCESS;
         } catch (\Exception $e) {
             $output->writeln('<error>' . $e->getMessage() . '</error>');
+
             return self::FAILURE;
         }
     }
