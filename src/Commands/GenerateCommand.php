@@ -24,12 +24,11 @@ class GenerateCommand extends Command
             $output->writeln('Generating <info>' . $name . '</info>');
 //            $generator = new \WPDevICU\WPPG\Generator\Generator($name);
 //            $generator->generate();
-            $output->writeln('<info>'. $name .' generated successfully!</info>');
+            $output->writeln('<info>' . $name . ' generated successfully!</info>');
             return self::SUCCESS;
         } catch (\Exception $e) {
             $output->writeln('<error>' . $e->getMessage() . '</error>');
             return $e->getCode();
         }
-
     }
 }

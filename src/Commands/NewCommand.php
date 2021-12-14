@@ -14,17 +14,17 @@ class NewCommand extends Command
         $this->setName('new')
             ->setDescription('Create a new WordPress plugin.')
             ->setHelp('This command allows you to create a new WordPress plugin.')
-            ->addArgument('name', InputArgument::REQUIRED, 'The name of the plugin.');
+            ->addArgument('directory', InputArgument::REQUIRED, 'The directory of the plugin.');
     }
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         try {
-            $name = $input->getArgument('name');
-            $output->writeln('Creating new plugin: ' . $name);
+            $directory = $input->getArgument('directory');
+            $output->writeln("Creating new plugin in: <info>{$directory}</info>");
 
             return self::SUCCESS;
         } catch (\Exception $e) {
-            $output->writeln('<error>' . $e->getMessage() . '</error>');
+            $output->writeln("<error>{$e->getMessage()}</error>");
 
             return self::FAILURE;
         }

@@ -8,6 +8,12 @@
             "WPDevICU\\WPPG\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "WPDevICU\\WPPG\\": "src/",
+            "WPDevICU\\WPPG\\Tests\\": "tests/"
+        }
+    },
     "authors": [
         {
             "name": "Shazahanul Islam Shohag",
@@ -16,6 +22,11 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "symfony/console": "^6.0"
-    }
+        "php": "^7.4|^8.0.3",
+        "symfony/console": "^5.4|^6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "bin": ["bin/wppg"]
 }
