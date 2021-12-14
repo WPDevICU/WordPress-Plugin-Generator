@@ -14,8 +14,8 @@ class GenerateCommandTest extends TestCase
      */
     public function itCanBeInstantiated()
     {
-        $newCommand = new GenerateCommand();
-        $this->assertInstanceOf(GenerateCommand::class, $newCommand);
+        $generateCommand = new GenerateCommand();
+        $this->assertInstanceOf(GenerateCommand::class, $generateCommand);
     }
 
     /**
