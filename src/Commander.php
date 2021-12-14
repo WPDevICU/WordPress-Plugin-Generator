@@ -10,7 +10,7 @@ class Commander
 {
     public const VERSION = '0.0.1';
 
-    protected Application $application;
+    public Application $application;
 
     public function __construct()
     {
