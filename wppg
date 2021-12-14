@@ -1,0 +1,13 @@
+#!/usr/bin/env php
+<?php
+
+use Symfony\Component\Console\Application;
+
+require __DIR__.'/vendor/autoload.php';
+
+$application = new Application( 'WordPress Plugin Generator', '0.0.1' );
+
+$application->add( new \WPDevICU\WPPG\Commands\NewCommand() );
+$application->add( new \WPDevICU\WPPG\Commands\GenerateCommand() );
+
+$application->run();
